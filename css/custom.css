@@ -1,0 +1,29 @@
+
+.preview-image {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  overflow: hidden;
+  border: medium solid #1EAEDB;
+}
+
+.preview-image:hover {
+  border: medium solid #137391;
+}
+
+.preview-image img {
+  /* centered position */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  /* keep aspect ratio */
+  object-fit: cover;
+  /* make sure frame is covered */
+  min-width: 100%;
+  min-height: 100%;
+  /* but limit scaling */
+  max-width: 125%;
+  max-height: 125%;
+}
